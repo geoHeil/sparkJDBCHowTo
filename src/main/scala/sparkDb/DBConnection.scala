@@ -17,6 +17,7 @@ object DBConnection extends App {
     val prop = new Properties()
     prop.put("user", "foo")
     prop.put("password", "foo")
+    prop.put("driver", "org.postgresql.Driver")
     import sql.implicits._
 
     val df = sc.parallelize(Array((1, 234), (2, 1233))).toDF("id", "val")
